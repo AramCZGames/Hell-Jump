@@ -1,6 +1,32 @@
 # Hell Jump
 
-I'm making a game called Hell Jump, it'll be an open source game so this is just the repo
+Play as a simple cube trying to jump, dodge, and survive your way out. Expect precise controls, increasing difficulty, and a whole lot of rage-quits (in the best way).
 
-# Download Hell Jump
-Itch io: https://aramczgames.itch.io/hell-jump
+Made with love (and probably a bit of frustration) in the Czech Republic ❤️  
+**Coming in 2026** – currently in development.
+
+## About the Game
+
+In *Hell Jump* you control a red cube trying to get out of Hell. Because the orange cube was bad but red cube was good but hell accidently took you instead of the orange cube.
+
+- Genre: Hardcore 2D platformer / endless ascender / rage game
+- Engine: Godot
+- Status: In development – first public release expected 2026
+- Goal: Open-source the full game so anyone can mod, improve, or learn from it
+
+## Download / Play
+
+→ **[Hell Jump on itch.io](https://aramczgames.itch.io/hell-jump)**
+
+More platforms / releases coming later.
+
+## Screenshots / Gameplay
+
+(Add some GIFs or screenshots here when you have them – they make a huge difference!)
+
+
+## Tech Stack
+
+- **Engine**: Godot 4.6
+- **Language**: GDScript
+- **Other tools**: Piskel
