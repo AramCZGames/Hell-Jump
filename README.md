@@ -20,11 +20,6 @@ In *Hell Jump* you control a red cube trying to get out of Hell. Because the ora
 
 More platforms / releases coming later.
 
-## Screenshots / Gameplay
-
-(Add some GIFs or screenshots here when you have them – they make a huge difference!)
-
-
 ## Tech Stack
 
 - **Engine**: Godot 4.6
