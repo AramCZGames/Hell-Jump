@@ -9,9 +9,9 @@ Made with love (and probably a bit of frustration) in the Czech Republic ❤️
 
 In *Hell Jump* you control a red cube trying to get out of Hell. Because the orange cube was bad but red cube was good but hell accidently took you instead of the orange cube.
 
-- Genre: Hardcore 2D platformer / endless ascender / rage game
+- Genre: Hardcore 2D platformer
 - Engine: Godot
-- Status: In development – first public release expected 2026
+- Status: In development – first public release expected Summer 2026
 - Goal: Open-source the full game so anyone can mod, improve, or learn from it
 
 ## Download / Play
