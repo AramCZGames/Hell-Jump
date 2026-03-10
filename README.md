@@ -22,6 +22,6 @@ More platforms / releases coming later.
 
 ## Tech Stack
 
-- **Engine**: Godot 4.6
+- **Engine**: Godot 4
 - **Language**: GDScript
 - **Other tools**: Piskel
