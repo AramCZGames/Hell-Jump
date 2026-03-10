@@ -1,0 +1,85 @@
+[gd_scene format=3 uid="uid://24ka6l87c4y5"]
+
+[ext_resource type="FontFile" uid="uid://ndkar43f25gy" path="res://Symtext.ttf" id="1_2whla"]
+[ext_resource type="Script" uid="uid://dyfojo42l1cpy" path="res://thank_you.gd" id="1_gkv6o"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t472n"]
+bg_color = Color(1, 0, 0, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 7
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tuohk"]
+bg_color = Color(0.576471, 0, 0, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 7
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_liuws"]
+
+[node name="Node2D" type="Node2D" unique_id=216177394]
+script = ExtResource("1_gkv6o")
+
+[node name="The hell BG" type="ColorRect" parent="." unique_id=689847859]
+light_mask = 513
+visibility_layer = 512
+offset_left = -47.0
+offset_top = -49.0
+offset_right = 1207.0
+offset_bottom = 662.0
+color = Color(1, 0.788235, 0.054902, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Thank you" type="Label" parent="." unique_id=817190942]
+z_index = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -118.0
+offset_top = 7.0
+offset_right = 1286.0
+offset_bottom = 463.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_2whla")
+theme_override_font_sizes/font_size = 32
+text = "Hey bud thank you for playing this game 
+I thank you if you completed all levels, 
+skipped some or skipped to level 15 
+I still thank you. 
+You can leave feedback on the game by commentiing on 
+itch or tagging @aramcz123 or 
+@aramczgames on X (Twitter) or just write on my 
+support mail or smth
+I hope you are excited for the full release and again.
+Thank you"
+horizontal_alignment = 1
+
+[node name="Back_button" type="Button" parent="." unique_id=1064755897]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 472.0
+offset_top = 558.0
+offset_right = 698.0
+offset_bottom = 639.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 0.57812, 0.357503, 1)
+theme_override_fonts/font = ExtResource("1_2whla")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_t472n")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_tuohk")
+theme_override_styles/hover = SubResource("StyleBoxFlat_t472n")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_liuws")
+text = "Back
+"
+
+[connection signal="pressed" from="Back_button" to="." method="_on_back_button_pressed"]
