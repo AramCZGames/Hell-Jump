@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://baa6c4d1set05"
+path="res://.godot/imported/Hell Jump Main menu music (unused).wav-dc8a64d4232c58841e59b7d87a5bc5e6.sample"
+
+[deps]
+
+source_file="res://Music/Hell Jump Main menu music (unused).wav"
+dest_files=["res://.godot/imported/Hell Jump Main menu music (unused).wav-dc8a64d4232c58841e59b7d87a5bc5e6.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=true
+edit/loop_mode=2
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
