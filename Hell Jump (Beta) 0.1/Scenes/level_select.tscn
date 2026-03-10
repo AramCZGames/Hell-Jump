@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://1e225fdbhkra"]
+
+[ext_resource type="Script" uid="uid://ci3ebi5gfcds7" path="res://Scripts/level_select.gd" id="1_2sqnl"]
+[ext_resource type="Texture2D" uid="uid://b7v8jb7tavgpt" path="res://Photos/misc/Red Background.png" id="1_nkys2"]
+[ext_resource type="FontFile" uid="uid://ndkar43f25gy" path="res://Symtext.ttf" id="3_2sqnl"]
+[ext_resource type="Texture2D" uid="uid://b2plu7mt0nu8b" path="res://Photos/misc/The Hell.png" id="4_2sqnl"]
+
+[node name="Level select" type="Control" unique_id=918917741]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2sqnl")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1299433775]
+layout_mode = 0
+offset_left = -71.0
+offset_top = -29.0
+offset_right = 1269.0
+offset_bottom = 705.0
+texture = ExtResource("1_nkys2")
+
+[node name="Label" type="Label" parent="." unique_id=1303427821]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -171.5
+offset_top = -15.0
+offset_right = 171.5
+offset_bottom = 78.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_2sqnl")
+theme_override_font_sizes/font_size = 47
+text = "Chapter select"
+
+[node name="The hell" type="TextureButton" parent="." unique_id=1525717722]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.0
+offset_top = -256.0
+offset_right = 128.0
+offset_bottom = 256.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("4_2sqnl")
+stretch_mode = 0
+
+[node name="The hell2" type="Label" parent="The hell" unique_id=1847386259]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.101
+anchor_bottom = 0.044
+offset_left = 24.0
+offset_top = 515.0
+offset_right = 195.002
+offset_bottom = 529.692
+theme_override_fonts/font = ExtResource("3_2sqnl")
+theme_override_font_sizes/font_size = 25
+text = "The hell"
+horizontal_alignment = 1
+
+[node name="Back Button" type="Button" parent="." unique_id=1410881166]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 7.0
+offset_right = 65.0
+offset_bottom = 65.0
+theme_override_font_sizes/font_size = 32
+text = "←"
+
+[connection signal="pressed" from="The hell" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="Back Button" to="." method="_on_back_button_pressed"]

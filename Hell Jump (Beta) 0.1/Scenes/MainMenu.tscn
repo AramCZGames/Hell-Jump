@@ -1,0 +1,478 @@
+[gd_scene format=3 uid="uid://cyme1smsvgfys"]
+
+[ext_resource type="Script" uid="uid://g8awgsqvh8rk" path="res://Scripts/main_menu.gd" id="1_loo7a"]
+[ext_resource type="Texture2D" uid="uid://th0ogeixot4u" path="res://Photos/misc/Hell Jump Logo.png" id="2_koqhg"]
+[ext_resource type="Script" uid="uid://b42voy6332qk8" path="res://Scripts/Menu scripts/fullscreen.gd" id="5_loo7a"]
+[ext_resource type="Script" uid="uid://dj32bs4u0duhr" path="res://Scripts/sfx_slider.gd" id="6_cmrfp"]
+[ext_resource type="Texture2D" uid="uid://cckv6mn85qs0t" path="res://Photos/Social Media/Youtube.png" id="7_cmrfp"]
+[ext_resource type="FontFile" uid="uid://ndkar43f25gy" path="res://Symtext.ttf" id="7_loo7a"]
+[ext_resource type="Texture2D" uid="uid://qpvpe5ibpnn6" path="res://Photos/Social Media/Itch.png" id="8_loo7a"]
+[ext_resource type="Texture2D" uid="uid://l3u00fvsa8tp" path="res://Photos/Social Media/Twiter.png" id="9_if7li"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kjwba"]
+bg_color = Color(1, 0, 0, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 7
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eiy7p"]
+bg_color = Color(0.576471, 0, 0, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 7
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eiy7p"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_8um5k"]
+color = Color(1, 1, 1, 1)
+thickness = 6
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_xim88"]
+color = Color(1, 0, 0, 1)
+thickness = 6
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_koqhg"]
+color = Color(1, 0.494251, 0.42709, 1)
+thickness = 6
+
+[sub_resource type="GDScript" id="GDScript_8um5k"]
+script/source = "extends Panel
+
+func _ready() -> void:
+	var config = ConfigFile.new()
+	var _err = config.load(\"user://settings.cfg\")
+	var agreed = config.get_value(\"user\", \"agreed\", false)
+	
+	if agreed:
+		visible = false
+
+
+func _on_agree_button_pressed() -> void:
+	var config = ConfigFile.new()
+	config.set_value(\"user\", \"agreed\", true)
+	config.save(\"user://settings.cfg\")
+	visible = false
+"
+
+[node name="Main_menu" type="Control" unique_id=23300147]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_loo7a")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=367968521]
+z_index = -5
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0.32156864, 0, 1)
+
+[node name="HellJumpLogo" type="Sprite2D" parent="." unique_id=97793616]
+position = Vector2(583.99994, 92.99999)
+scale = Vector2(0.37207037, 0.37207034)
+texture = ExtResource("2_koqhg")
+
+[node name="Beta" type="Label" parent="HellJumpLogo" unique_id=632741211]
+offset_left = 430.02637
+offset_top = 48.377975
+offset_right = 891.02637
+offset_bottom = 268.378
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_fonts/font = ExtResource("7_loo7a")
+theme_override_font_sizes/font_size = 150
+text = "Beta"
+
+[node name="main_menu" type="VBoxContainer" parent="." unique_id=6614238]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -169.0
+offset_top = -51.0
+offset_right = 169.0
+offset_bottom = 176.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 14
+
+[node name="Play_Button" type="Button" parent="main_menu" unique_id=807034801]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.57812, 0.357503, 1)
+theme_override_fonts/font = ExtResource("7_loo7a")
+theme_override_font_sizes/font_size = 80
+theme_override_styles/normal = SubResource("StyleBoxFlat_kjwba")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_eiy7p")
+theme_override_styles/hover = SubResource("StyleBoxFlat_kjwba")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_eiy7p")
+text = "Play"
+
+[node name="Options_button" type="Button" parent="main_menu" unique_id=428000195]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.57812, 0.357503, 1)
+theme_override_fonts/font = ExtResource("7_loo7a")
+theme_override_font_sizes/font_size = 80
+theme_override_styles/normal = SubResource("StyleBoxFlat_kjwba")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_eiy7p")
+theme_override_styles/hover = SubResource("StyleBoxFlat_kjwba")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_eiy7p")
+text = "Options
+"
+
+[node name="Credits_Button" type="Button" parent="main_menu" unique_id=1358758113]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.57812, 0.357503, 1)
+theme_override_fonts/font = ExtResource("7_loo7a")
+theme_override_font_sizes/font_size = 80
+theme_override_styles/normal = SubResource("StyleBoxFlat_kjwba")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_eiy7p")
+theme_override_styles/hover = SubResource("StyleBoxFlat_kjwba")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_eiy7p")
+text = "Credits"
+
+[node name="Exit_button" type="Button" parent="." unique_id=245744193]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 5.0
+offset_right = 92.0
+offset_bottom = 94.0
+theme_override_colors/font_color = Color(1, 0.57812, 0.357503, 1)
+theme_override_fonts/font = ExtResource("7_loo7a")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxFlat_kjwba")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_eiy7p")
+theme_override_styles/hover = SubResource("StyleBoxFlat_kjwba")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_eiy7p")
+text = "X
+"
+
+[node name="settings menu" type="Panel" parent="." unique_id=833755077]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -341.0
+offset_top = -160.0
+offset_right = 321.0
+offset_bottom = 271.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="OptionsTitle" type="Label" parent="settings menu" unique_id=1551349981]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = -2.0
+offset_top = 5.0
+offset_right = -2.0
+offset_bottom = 79.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("7_loo7a")
+theme_override_font_sizes/font_size = 37
+text = "Options"
+horizontal_alignment = 1
+
+[node name="Fullscreen" type="CheckButton" parent="settings menu" unique_id=309696598]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -295.0
+offset_top = 203.0
+offset_right = 273.0
+offset_bottom = 249.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("7_loo7a")
+theme_override_font_sizes/font_size = 18
+text = "Fullscreen ⛶"
+script = ExtResource("5_loo7a")
+
+[node name="VolumeTitle" type="Label" parent="settings menu" unique_id=862232158]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -52.0
+offset_top = -138.5
+offset_right = 35.0
+offset_bottom = -95.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("7_loo7a")
+theme_override_font_sizes/font_size = 20
+text = "Volume"
+
+[node name="SFX" type="Label" parent="settings menu/VolumeTitle" unique_id=1528672655]
+layout_mode = 0
+offset_left = -176.0
+offset_top = 32.0
+offset_right = -130.0
+offset_bottom = 64.0
+theme_override_fonts/font = ExtResource("7_loo7a")
+theme_override_font_sizes/font_size = 18
+text = "SFX"
+
+[node name="SFX Slider" type="HSlider" parent="settings menu" unique_id=405547833]
+layout_mode = 0
+offset_left = 104.0
+offset_top = 138.0
+offset_right = 529.0
+offset_bottom = 154.0
+theme_override_styles/slider = SubResource("StyleBoxLine_8um5k")
+theme_override_styles/grabber_area = SubResource("StyleBoxLine_xim88")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_koqhg")
+min_value = -80.0
+max_value = 0.0
+script = ExtResource("6_cmrfp")
+
+[node name="Other" type="Label" parent="settings menu" unique_id=323417327]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -30.0
+offset_top = -43.5
+offset_right = 30.0
+offset_bottom = -8.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("7_loo7a")
+theme_override_font_sizes/font_size = 22
+text = "Other"
+
+[node name="Back_button" type="Button" parent="settings menu" unique_id=968480128]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -113.0
+offset_top = -85.0
+offset_right = 113.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 0.57812, 0.357503, 1)
+theme_override_fonts/font = ExtResource("7_loo7a")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_kjwba")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_eiy7p")
+theme_override_styles/hover = SubResource("StyleBoxFlat_kjwba")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_eiy7p")
+text = "Back
+"
+
+[node name="TermsPanel" type="Panel" parent="." unique_id=1515014745]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -341.0
+offset_top = -160.0
+offset_right = 322.0
+offset_bottom = 270.0
+grow_horizontal = 2
+grow_vertical = 2
+script = SubResource("GDScript_8um5k")
+
+[node name="Terms of rage" type="Label" parent="TermsPanel" unique_id=1371121578]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -72.5
+offset_top = 6.0
+offset_right = 34.5
+offset_bottom = 60.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("7_loo7a")
+theme_override_font_sizes/font_size = 27
+text = "Terms of rage"
+
+[node name="Terms of rage2" type="Label" parent="TermsPanel" unique_id=500589010]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 6.0
+offset_top = -147.0
+offset_right = 660.0
+offset_bottom = 137.0
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("7_loo7a")
+theme_override_font_sizes/font_size = 25
+text = "By clicking agree, you agree on:
+
+This game is intentionally hard
+Rage is inevitable
+beginning is easy
+dev is not responsible
+"
+horizontal_alignment = 1
+
+[node name="AgreeButton" type="Button" parent="TermsPanel" unique_id=1826211865]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -133.46667
+offset_top = -91.0
+offset_right = 133.46667
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 0.57812, 0.357503, 1)
+theme_override_fonts/font = ExtResource("7_loo7a")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_kjwba")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_eiy7p")
+theme_override_styles/hover = SubResource("StyleBoxFlat_kjwba")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_eiy7p")
+text = "I agree"
+
+[node name="credits_menu" type="Panel" parent="." unique_id=166933096]
+layout_mode = 0
+offset_left = 235.0
+offset_top = 164.0
+offset_right = 898.0
+offset_bottom = 595.0
+
+[node name="CreditsTitle" type="Label" parent="credits_menu" unique_id=1254454428]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -224.0
+offset_top = -11.0
+offset_right = 224.0
+offset_bottom = 63.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("7_loo7a")
+theme_override_font_sizes/font_size = 48
+text = "Credits"
+horizontal_alignment = 1
+
+[node name="CreditsDesc" type="Label" parent="credits_menu" unique_id=857912544]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 55.0
+offset_right = 691.0
+offset_bottom = 371.0
+theme_override_fonts/font = ExtResource("7_loo7a")
+theme_override_font_sizes/font_size = 15
+text = "Made by AramCZGames with love from czech republic 
+Main developer: Aram
+Programmer: Aram
+Artist: Aram
+SFX Artist: Aram
+Dev team: Aram
+contact: contact.aramczgames@proton.me or @AramCZGames on X
+Font: symtext
+special thanks: Of course you the player and all my playtestors
+playtesters: u/Independent_Bag8643 and u/endervader30 on 
+reddit
+
+"
+
+[node name="Back_button" type="Button" parent="credits_menu" unique_id=202772893]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -113.0
+offset_top = -85.0
+offset_right = 113.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 0.57812, 0.357503, 1)
+theme_override_fonts/font = ExtResource("7_loo7a")
+theme_override_font_sizes/font_size = 39
+theme_override_styles/normal = SubResource("StyleBoxFlat_kjwba")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_eiy7p")
+theme_override_styles/hover = SubResource("StyleBoxFlat_kjwba")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_eiy7p")
+text = "Back
+"
+
+[node name="qwertz" type="Label" parent="." unique_id=377451189]
+layout_mode = 0
+offset_left = -2905.0
+offset_top = -1981.0
+offset_right = -2155.0
+offset_bottom = -1917.0
+theme_override_fonts/font = ExtResource("7_loo7a")
+theme_override_font_sizes/font_size = 39
+text = "If you are seeing this then stop hacking into my games :("
+
+[node name="Youtube" type="TextureButton" parent="." unique_id=1421902132]
+z_index = 1
+layout_mode = 0
+offset_left = 866.0
+offset_top = 553.0
+offset_right = 959.0
+offset_bottom = 646.0
+texture_normal = ExtResource("7_cmrfp")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Itch" type="TextureButton" parent="." unique_id=1165418667]
+z_index = 1
+layout_mode = 0
+offset_left = 1056.0
+offset_top = 553.0
+offset_right = 1149.0
+offset_bottom = 646.0
+texture_normal = ExtResource("8_loo7a")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Twitter" type="TextureButton" parent="." unique_id=1595970339]
+z_index = 1
+layout_mode = 0
+offset_left = 961.0
+offset_top = 553.0
+offset_right = 1054.0
+offset_bottom = 646.0
+texture_normal = ExtResource("9_if7li")
+ignore_texture_size = true
+stretch_mode = 0
+
+[connection signal="pressed" from="main_menu/Play_Button" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="main_menu/Options_button" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="main_menu/Credits_Button" to="." method="_on_credits_button_pressed"]
+[connection signal="pressed" from="Exit_button" to="." method="_on_exit_button_pressed"]
+[connection signal="toggled" from="settings menu/Fullscreen" to="settings menu/Fullscreen" method="_on_toggled"]
+[connection signal="pressed" from="settings menu/Back_button" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="TermsPanel/AgreeButton" to="TermsPanel" method="_on_agree_button_pressed"]
+[connection signal="pressed" from="credits_menu/Back_button" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="Youtube" to="." method="_on_youtube_pressed"]
+[connection signal="pressed" from="Itch" to="." method="_on_itch_pressed"]
+[connection signal="pressed" from="Twitter" to="." method="_on_twitter_pressed"]
