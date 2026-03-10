@@ -1,0 +1,330 @@
+[gd_scene format=3 uid="uid://c7yo3htne11v8"]
+
+[ext_resource type="AudioStream" uid="uid://ce26ugl2ji5j4" path="res://SFX/Dash.wav" id="1_aopm6"]
+[ext_resource type="Texture2D" uid="uid://da3ytm4g4dmw" path="res://Photos/misc/Spike.png" id="1_n63yr"]
+[ext_resource type="AudioStream" uid="uid://ddf1h7qgejd5h" path="res://SFX/jump.wav" id="1_sxyf2"]
+[ext_resource type="Texture2D" uid="uid://rteiaa58cgfe" path="res://Photos/misc/Finish Line.png" id="2_sfk1o"]
+[ext_resource type="AudioStream" uid="uid://dwg7anwuclwvf" path="res://SFX/hitHurt.wav" id="3_oa5fo"]
+[ext_resource type="Texture2D" uid="uid://dh1rspxe0woek" path="res://Photos/misc/Tutorial 2.png" id="6_ae8sh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_42vi7"]
+size = Vector2(74.25, 678.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yium0"]
+size = Vector2(1323, 86.4375)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jppa2"]
+size = Vector2(1323, 86.4375)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fw3q0"]
+size = Vector2(74.25, 678.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5oof7"]
+size = Vector2(274, 52)
+
+[sub_resource type="GDScript" id="GDScript_soqp3"]
+script/source = "extends CharacterBody2D
+
+@export var gravity: float = 1400.0
+@export var walk_speed: float = 300.0
+@export var jump_speed: float = 600.0
+@export var dash_speed: float = 900.0
+@export var dash_duration: float = 0.12
+@export var dash_cooldown: float = 0.35
+@export var sprite_spin_speed: float = 14.0
+
+var _dashing: bool = false
+var _dash_ready: bool = true
+var _facing: int = 1
+var _dead: bool = false
+
+@onready var _sprite := $Sprite2D
+@onready var _sfx_jump := get_node_or_null(\"SfxJump\") as AudioStreamPlayer2D
+@onready var _sfx_dash := get_node_or_null(\"SfxDash\") as AudioStreamPlayer2D
+@onready var _trail := get_node_or_null(\"DashTrail\") as GPUParticles2D
+
+func _physics_process(delta: float) -> void:
+	if _dead:
+		return
+
+	var dir := Input.get_axis(\"move_left\", \"move_right\")
+	if dir != 0:
+		_facing = sign(dir)
+
+	if not _dashing:
+		velocity.x = dir * walk_speed
+		velocity.y += gravity * delta
+
+		if Input.is_action_just_pressed(\"jump\") and is_on_floor():
+			velocity.y = -jump_speed
+			if _sfx_jump:
+				_sfx_jump.stop()
+				_sfx_jump.play()
+
+		if Input.is_action_just_pressed(\"dash\") and _dash_ready:
+			var dash_dir := _facing
+			if dir != 0:
+				dash_dir = sign(dir)
+			_start_dash(dash_dir)
+	else:
+		velocity.y = 0
+		if _sprite:
+			_sprite.rotation += sprite_spin_speed * delta * _facing
+
+	move_and_slide()
+
+func _start_dash(dir: int) -> void:
+	_dashing = true
+	_dash_ready = false
+	_facing = dir
+
+	velocity.y = 0
+	velocity.x = dash_speed * dir
+
+	if _trail:
+		_trail.emitting = true
+
+	if _sfx_dash:
+		_sfx_dash.play()
+
+	_end_dash_async()
+
+func _end_dash_async() -> void:
+	await get_tree().create_timer(dash_duration).timeout
+	_dashing = false
+
+	if _sprite:
+		_sprite.rotation = 0.0
+
+	if _trail:
+		_trail.emitting = false
+
+	await get_tree().create_timer(dash_cooldown).timeout
+	_dash_ready = true
+
+func _on_spike_body_entered(body: Node2D) -> void:
+	if body is CharacterBody2D and not _dead:
+		_die()
+
+func _die() -> void:
+	_dead = true
+	velocity = Vector2.ZERO
+
+	get_tree().paused = true
+
+	var timer := get_tree().create_timer(1.0, true)
+	timer.timeout.connect(_reload_room)
+
+func _reload_room() -> void:
+	get_tree().paused = false
+	get_tree().reload_current_scene()
+
+
+func _on_finish_line_body_entered(body: Node2D) -> void:
+	get_tree().change_scene_to_file(\"res://Scenes/the_hell_level_select.tscn\")
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aopm6"]
+size = Vector2(60, 59)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oa5fo"]
+size = Vector2(123, 53)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5stqt"]
+size = Vector2(386, 102)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sxyf2"]
+size = Vector2(66, 188)
+
+[node name="Node2D" type="Node2D" unique_id=1207835655]
+
+[node name="Wall" type="StaticBody2D" parent="." unique_id=2064126302]
+position = Vector2(-155, 161)
+
+[node name="ColorRect" type="ColorRect" parent="Wall" unique_id=118675470]
+z_index = 1
+offset_left = 110.0
+offset_top = -162.0
+offset_right = 183.0
+offset_bottom = 523.0
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Wall collision" type="CollisionShape2D" parent="Wall" unique_id=10806776]
+z_index = 1
+position = Vector2(145.875, 183.25)
+shape = SubResource("RectangleShape2D_42vi7")
+
+[node name="Celling" type="StaticBody2D" parent="." unique_id=1843216282]
+z_index = 1
+position = Vector2(-5, -644)
+
+[node name="ColorRect" type="ColorRect" parent="Celling" unique_id=1554419778]
+z_index = 1
+offset_left = -65.375
+offset_top = 620.125
+offset_right = 1250.63
+offset_bottom = 706.125
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="CellingCollision" type="CollisionShape2D" parent="Celling" unique_id=21848815]
+z_index = 1
+position = Vector2(592.5, 662.938)
+shape = SubResource("RectangleShape2D_yium0")
+
+[node name="Floor" type="StaticBody2D" parent="." unique_id=1057536553]
+z_index = 1
+
+[node name="ColorRect" type="ColorRect" parent="Floor" unique_id=668131771]
+z_index = 1
+offset_left = -65.375
+offset_top = 620.125
+offset_right = 1250.63
+offset_bottom = 706.125
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="FloorCollision" type="CollisionShape2D" parent="Floor" unique_id=1758838570]
+z_index = 1
+position = Vector2(592.5, 663.219)
+shape = SubResource("RectangleShape2D_jppa2")
+
+[node name="Wall2" type="StaticBody2D" parent="." unique_id=50973031]
+position = Vector2(1005, 168)
+
+[node name="ColorRect" type="ColorRect" parent="Wall2" unique_id=168641709]
+z_index = 1
+offset_left = 110.0
+offset_top = -162.0
+offset_right = 183.0
+offset_bottom = 523.0
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Wall2 collision" type="CollisionShape2D" parent="Wall2" unique_id=826457420]
+z_index = 1
+position = Vector2(147, 183.25)
+shape = SubResource("RectangleShape2D_fw3q0")
+
+[node name="The hell BG" type="ColorRect" parent="." unique_id=1658839736]
+light_mask = 513
+visibility_layer = 512
+z_index = -5
+offset_left = -59.0
+offset_top = -55.0
+offset_right = 1195.0
+offset_bottom = 656.0
+color = Color(1, 0.788235, 0.054902, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Platform1" type="StaticBody2D" parent="." unique_id=1736189599]
+
+[node name="ColorRect" type="ColorRect" parent="Platform1" unique_id=1473594329]
+offset_left = 26.0
+offset_top = 308.0
+offset_right = 301.0
+offset_bottom = 360.0
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Platform 1" type="CollisionShape2D" parent="Platform1" unique_id=1462721298]
+position = Vector2(164, 334)
+shape = SubResource("RectangleShape2D_5oof7")
+
+[node name="Red cube" type="CharacterBody2D" parent="." unique_id=1304105294]
+z_index = 10
+position = Vector2(-52, -331)
+safe_margin = 0.001
+script = SubResource("GDScript_soqp3")
+
+[node name="Sprite2D" type="ColorRect" parent="Red cube" unique_id=562404933]
+z_index = 2
+offset_left = 99.0
+offset_top = 580.0
+offset_right = 159.0
+offset_bottom = 639.0
+color = Color(0.929412, 0.109804, 0.141176, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="PlayerCollision" type="CollisionShape2D" parent="Red cube" unique_id=280148832]
+z_index = 10
+position = Vector2(129, 609.5)
+shape = SubResource("RectangleShape2D_aopm6")
+
+[node name="SfxDash" type="AudioStreamPlayer2D" parent="Red cube" unique_id=948872016]
+stream = ExtResource("1_aopm6")
+
+[node name="SfxJump" type="AudioStreamPlayer2D" parent="Red cube" unique_id=669820167]
+position = Vector2(1, 0)
+stream = ExtResource("1_sxyf2")
+
+[node name="SfxHurt" type="AudioStreamPlayer2D" parent="Red cube" unique_id=1081196292]
+position = Vector2(129, 609)
+stream = ExtResource("3_oa5fo")
+
+[node name="Spike" type="Area2D" parent="." unique_id=1107411843]
+z_index = 5
+position = Vector2(111, 165)
+
+[node name="SpikeSprite" type="Sprite2D" parent="Spike" unique_id=1029065354]
+z_index = 5
+position = Vector2(658, 420)
+scale = Vector2(1.5531253, 0.45624995)
+texture = ExtResource("1_n63yr")
+
+[node name="CollisionSpike" type="CollisionShape2D" parent="Spike" unique_id=566189331]
+position = Vector2(657.5, 428.5)
+shape = SubResource("RectangleShape2D_oa5fo")
+
+[node name="Spike3" type="Area2D" parent="." unique_id=873380704]
+z_index = 5
+position = Vector2(-83, 165)
+
+[node name="SpikeSprite" type="Sprite2D" parent="Spike3" unique_id=1154137960]
+z_index = 5
+position = Vector2(464, 386)
+scale = Vector2(0.8625, 0.8625)
+texture = ExtResource("1_n63yr")
+
+[node name="CollisionSpike" type="CollisionShape2D" parent="Spike3" unique_id=1259113131]
+position = Vector2(305, 403)
+shape = SubResource("RectangleShape2D_5stqt")
+
+[node name="SpikeSprite" type="Sprite2D" parent="." unique_id=447679204]
+z_index = 5
+position = Vector2(244, 551)
+scale = Vector2(0.8625, 0.8625)
+texture = ExtResource("1_n63yr")
+
+[node name="SpikeSprite2" type="Sprite2D" parent="." unique_id=1833689025]
+z_index = 5
+position = Vector2(105.99999, 551)
+scale = Vector2(0.8625, 0.8625)
+texture = ExtResource("1_n63yr")
+
+[node name="FinishLine" type="Area2D" parent="." unique_id=783252302]
+z_index = 7
+
+[node name="FinishLineCollision" type="CollisionShape2D" parent="FinishLine" unique_id=1222633233]
+position = Vector2(991, 525)
+shape = SubResource("RectangleShape2D_sxyf2")
+
+[node name="TextureRect" type="TextureRect" parent="FinishLine" unique_id=1869912154]
+offset_left = 958.0
+offset_top = 432.0
+offset_right = 1024.0
+offset_bottom = 620.0
+texture = ExtResource("2_sfk1o")
+expand_mode = 4
+stretch_mode = 6
+metadata/_edit_use_anchors_ = true
+
+[node name="Tutorial2" type="Sprite2D" parent="." unique_id=453142599]
+position = Vector2(772, 438)
+scale = Vector2(0.49375, 0.49375)
+texture = ExtResource("6_ae8sh")
+
+[connection signal="body_entered" from="Spike" to="Red cube" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="Spike3" to="Red cube" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="FinishLine" to="Red cube" method="_on_finish_line_body_entered"]

@@ -1,0 +1,171 @@
+[gd_scene format=3 uid="uid://c2kmx46avimx5"]
+
+[ext_resource type="Script" uid="uid://cfoynt14obb6w" path="res://Scripts/red_cube.gd" id="3_aphf3"]
+[ext_resource type="AudioStream" uid="uid://ddf1h7qgejd5h" path="res://SFX/jump.wav" id="4_g7rl5"]
+[ext_resource type="Texture2D" uid="uid://da3ytm4g4dmw" path="res://Photos/misc/Spike.png" id="5_2u8gh"]
+[ext_resource type="AudioStream" uid="uid://ce26ugl2ji5j4" path="res://SFX/Dash.wav" id="5_g7rl5"]
+[ext_resource type="AudioStream" uid="uid://dwg7anwuclwvf" path="res://SFX/hitHurt.wav" id="6_5r8pb"]
+[ext_resource type="Texture2D" uid="uid://rteiaa58cgfe" path="res://Photos/misc/Finish Line.png" id="6_g7rl5"]
+[ext_resource type="Texture2D" uid="uid://cgdk3odqcrvw4" path="res://Photos/misc/StartingSign.png" id="7_5r8pb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ldjcd"]
+size = Vector2(1320, 86.4375)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n6avh"]
+size = Vector2(74.25, 678.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ef0e7"]
+size = Vector2(30, 45)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g7rl5"]
+size = Vector2(60, 59)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5r8pb"]
+size = Vector2(66, 185)
+
+[node name="Level1" type="Node2D" unique_id=607248946]
+
+[node name="Celling" type="StaticBody2D" parent="." unique_id=1050302968]
+z_index = 1
+position = Vector2(-5, -644)
+
+[node name="ColorRect" type="ColorRect" parent="Celling" unique_id=262795636]
+z_index = 1
+offset_left = -65.375
+offset_top = 620.125
+offset_right = 1250.63
+offset_bottom = 706.125
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="CellingCollision" type="CollisionShape2D" parent="Celling" unique_id=1514351850]
+z_index = 1
+position = Vector2(593, 662.938)
+shape = SubResource("RectangleShape2D_ldjcd")
+
+[node name="Wall" type="StaticBody2D" parent="." unique_id=1629517203]
+position = Vector2(-150, 169)
+
+[node name="ColorRect" type="ColorRect" parent="Wall" unique_id=1157518931]
+z_index = 1
+offset_left = 110.0
+offset_top = -162.0
+offset_right = 183.0
+offset_bottom = 523.0
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Wall collision" type="CollisionShape2D" parent="Wall" unique_id=1034837161]
+z_index = 1
+position = Vector2(145.875, 183.25)
+shape = SubResource("RectangleShape2D_n6avh")
+
+[node name="The hell BG" type="ColorRect" parent="." unique_id=1786454907]
+light_mask = 513
+visibility_layer = 512
+offset_left = -59.0
+offset_top = -55.0
+offset_right = 1195.0
+offset_bottom = 656.0
+color = Color(1, 0.788235, 0.054902, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Floor" type="StaticBody2D" parent="." unique_id=882288778]
+
+[node name="ColorRect" type="ColorRect" parent="Floor" unique_id=697017105]
+offset_left = -65.375
+offset_top = 620.125
+offset_right = 1250.63
+offset_bottom = 706.125
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="FloorCollision" type="CollisionShape2D" parent="Floor" unique_id=867498365]
+position = Vector2(592.5, 663.219)
+shape = SubResource("RectangleShape2D_ldjcd")
+
+[node name="Wall2" type="StaticBody2D" parent="." unique_id=1441439152]
+position = Vector2(1005, 168)
+
+[node name="ColorRect" type="ColorRect" parent="Wall2" unique_id=1336938429]
+z_index = 1
+offset_left = 110.0
+offset_top = -162.0
+offset_right = 183.0
+offset_bottom = 523.0
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Wall2 collision" type="CollisionShape2D" parent="Wall2" unique_id=157647637]
+z_index = 1
+position = Vector2(147, 183.25)
+shape = SubResource("RectangleShape2D_n6avh")
+
+[node name="Spike" type="Area2D" parent="." unique_id=1384681072]
+z_index = 5
+position = Vector2(-83, 165)
+
+[node name="SpikeSprite" type="Sprite2D" parent="Spike" unique_id=673546501]
+z_index = 5
+position = Vector2(655, 424)
+scale = Vector2(0.3875, 0.3875)
+texture = ExtResource("5_2u8gh")
+
+[node name="CollisionSpike" type="CollisionShape2D" parent="Spike" unique_id=2127790094]
+z_index = 5
+position = Vector2(655, 431.5)
+shape = SubResource("RectangleShape2D_ef0e7")
+
+[node name="StartingSign" type="Sprite2D" parent="." unique_id=884586833]
+position = Vector2(571, 189)
+texture = ExtResource("7_5r8pb")
+
+[node name="Red cube" type="CharacterBody2D" parent="." unique_id=1800562217]
+z_index = 10
+position = Vector2(21, -18)
+safe_margin = 0.001
+script = ExtResource("3_aphf3")
+
+[node name="Sprite2D" type="ColorRect" parent="Red cube" unique_id=780663442]
+z_index = 2
+offset_left = 99.0
+offset_top = 580.0
+offset_right = 159.0
+offset_bottom = 639.0
+color = Color(0.929412, 0.109804, 0.141176, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="PlayerCollision" type="CollisionShape2D" parent="Red cube" unique_id=1943590668]
+z_index = 10
+position = Vector2(129, 609.5)
+shape = SubResource("RectangleShape2D_g7rl5")
+
+[node name="SfxJump" type="AudioStreamPlayer2D" parent="Red cube" unique_id=1427403414]
+position = Vector2(379, 190)
+stream = ExtResource("4_g7rl5")
+
+[node name="SfxDash" type="AudioStreamPlayer2D" parent="Red cube" unique_id=982336836]
+stream = ExtResource("5_g7rl5")
+
+[node name="SfxHurt" type="AudioStreamPlayer2D" parent="Red cube" unique_id=644073283]
+stream = ExtResource("6_5r8pb")
+
+[node name="FinishLine" type="Area2D" parent="." unique_id=6291839]
+z_index = 7
+
+[node name="FinishLineCollision" type="CollisionShape2D" parent="FinishLine" unique_id=1279753740]
+position = Vector2(991, 525)
+shape = SubResource("RectangleShape2D_5r8pb")
+
+[node name="TextureRect" type="TextureRect" parent="FinishLine" unique_id=1980570386]
+offset_left = 958.0
+offset_top = 432.0
+offset_right = 1024.0
+offset_bottom = 620.0
+texture = ExtResource("6_g7rl5")
+expand_mode = 4
+stretch_mode = 6
+metadata/_edit_use_anchors_ = true
+
+[connection signal="body_entered" from="Spike" to="Red cube" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="FinishLine" to="Red cube" method="_on_finish_line_body_entered"]
