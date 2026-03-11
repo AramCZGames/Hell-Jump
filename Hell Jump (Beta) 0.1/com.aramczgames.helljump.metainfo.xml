@@ -2,7 +2,7 @@
 <component type="desktop-application">
   <id>com.aramczgames.helljump</id>
   <name>Hell Jump (Beta)</name>
-  <summary>A hellish platformer set in hell</summary>
+  <summary>Platformer set in hell</summary>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>MIT</project_license>
   <developer id="com.aramczgames">
@@ -11,7 +11,7 @@
   <url type="homepage">https://github.com/AramCZGames/com.aramczgames.helljump</url>
   <url type="source">https://github.com/AramCZGames/hell-jump</url>
   <description>
-    <p>Hell Jump is a challenging platformer where you play as a red cube who was mistakenly sent to hell. Jump, dash and escape your way through hellish levels!</p>
+    <p>In Hell jump you play as a red cube and you were mistakenly sent to hell so you need to get out of hell. It is a rage platformer</p>
   </description>
   <screenshots>
     <screenshot type="default">
@@ -28,9 +28,9 @@
     </screenshot>
   </screenshots>
   <releases>
-    <release version="0.1" date="2026-03-11">
+    <release version="0.1" date="2026-03-10">
       <description>
-        <p>Initial beta release.</p>
+        <p>First beta</p>
       </description>
     </release>
   </releases>
