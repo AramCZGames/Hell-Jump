@@ -18,6 +18,8 @@ In *Hell Jump* you control a red cube trying to get out of Hell. Because the ora
 
 → **[Hell Jump on itch.io](https://aramczgames.itch.io/hell-jump)**
 
+→ **[Hell Jump on Snap Store](https://snapcraft.io/helljump)**
+
 More platforms / releases coming later.
 
 ## Tech Stack
