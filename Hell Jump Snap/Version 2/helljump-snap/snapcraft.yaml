@@ -1,0 +1,35 @@
+name: helljump
+base: core22
+version: '0.1'
+title: Hell Jump (Beta)
+summary: A hellish platformer
+description: |
+  Hell Jump is a challenging platformer where you play as a red cube
+  who was mistakenly sent to hell. Jump, dash and escape your way
+  through hellish levels!
+contact: https://github.com/AramCZGames
+website: https://github.com/AramCZGames/Hell-Jump
+source-code: https://github.com/AramCZGames/Hell-Jump
+issues: https://github.com/AramCZGames/Hell-Jump/issues
+license: MIT
+
+grade: stable
+confinement: strict
+
+parts:
+  helljump:
+    plugin: dump
+    source: .
+    organize:
+      bin/HellJump.x86_64: bin/HellJump.x86_64
+      bin/HellJump.pck: bin/HellJump.pck
+
+apps:
+  helljump:
+    command: bin/HellJump.x86_64
+    extensions: [gnome]
+    desktop: snap/gui/helljump.desktop
+    plugs:
+      - opengl
+      - audio-playback
+      - joystick
