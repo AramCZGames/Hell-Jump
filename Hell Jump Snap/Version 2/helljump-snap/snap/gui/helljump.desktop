@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Hell Jump (Beta)
+Exec=helljump
+Icon=${SNAP}/snap/gui/helljump.png
+Type=Application
+Categories=Game;
