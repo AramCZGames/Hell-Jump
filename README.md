@@ -20,6 +20,8 @@ In *Hell Jump* you control a red cube trying to get out of Hell. Because the ora
 
 → **[Hell Jump on Snap Store](https://snapcraft.io/helljump)**
 
+→ **[Hell Jump on Game Jolt](https://gamejolt.com/games/helljump/1056911)**
+
 More platforms / releases coming later.
 
 ## Tech Stack
