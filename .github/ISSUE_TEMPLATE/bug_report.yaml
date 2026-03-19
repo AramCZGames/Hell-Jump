@@ -1,0 +1,45 @@
+name: Bug Report
+description: Report a bug in Hell Jump
+labels: ["bug"]
+body:
+  - type: checkboxes
+    id: game_related
+    attributes:
+      label: Related game
+      options:
+        - label: Is this related to Hell Jump?
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug Description
+      placeholder: Describe the bug here...
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      placeholder: "1. Go to...\n2. Jump on...\n3. See error"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      options:
+        - Windows
+        - Linux
+
+  - type: dropdown
+    id: store
+    attributes:
+      label: Store
+      options:
+        - Itch.io
+        - Game Jolt
+        - Snap Store
