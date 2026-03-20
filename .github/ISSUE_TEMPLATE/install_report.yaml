@@ -1,13 +1,13 @@
 name: Install Report
 description: Report an install issue in Hell Jump
-labels: ["bug"]
+labels: ["install issue"]
 body:
 
   - type: textarea
     id: description
     attributes:
-      label: Bug Description
-      placeholder: Describe the bug here...
+      label: Install issue descriptiom
+      placeholder: Describe the issue here...
     validations:
       required: true
 
