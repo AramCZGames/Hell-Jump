@@ -7,7 +7,7 @@ body:
     attributes:
       label: Related game
       options:
-        - label: Is this related to Hell Jump?
+        - label: Is this related to the game itself?
     validations:
       required: true
 
