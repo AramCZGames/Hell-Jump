@@ -28,4 +28,4 @@ More platforms / releases coming later.
 
 - **Engine**: Godot 4
 - **Language**: GDScript
-- **Other tools**: Piskel 
+- **Other tools**: Piskel
