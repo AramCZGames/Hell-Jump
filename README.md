@@ -2,7 +2,7 @@
 
 Play as a simple cube trying to jump, dodge, and survive your way out. Expect precise controls, increasing difficulty, and a whole lot of rage-quits (in the best way).
 
-Made with love (and probably a bit of frustration) in the Czech Republic ❤️  
+Made with love (and probably a bit of frustration) in the Czech Republic ❤️
 **Coming in Summer 2026** – currently in development.
 
 ## About the Game
