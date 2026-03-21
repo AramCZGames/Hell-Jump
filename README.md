@@ -12,7 +12,6 @@ In *Hell Jump* you control a red cube trying to get out of Hell. Because the ora
 - Genre: Hardcore 2D platformer
 - Engine: Godot
 - Status: In development – first full release expected Summer 2026
-- Goal: Open-source the full game so anyone can mod, improve, or learn from it
 
 ## Download / Play
 
@@ -29,3 +28,8 @@ More platforms / releases coming later.
 - **Engine**: Godot 4
 - **Language**: GDScript
 - **Other tools**: Piskel
+
+## Meet the devs
+
+**AramCZ**
+Hello guys my name is Aram. I am a random guy who likes to make games. So I decided to make my first game called: Hell Jump

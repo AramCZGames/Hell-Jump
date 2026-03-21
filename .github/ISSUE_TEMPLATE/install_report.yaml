@@ -6,7 +6,7 @@ body:
   - type: textarea
     id: description
     attributes:
-      label: Install issue descriptiom
+      label: Install issue description
       placeholder: Describe the issue here...
     validations:
       required: true

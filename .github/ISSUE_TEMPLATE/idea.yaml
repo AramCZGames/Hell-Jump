@@ -1,0 +1,23 @@
+name: Idea
+description: Request an idea in Hell Jump
+labels: ["idea"]
+body:
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Idea description
+      placeholder: Describe your masterpiece here ...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      options:
+        - For all of them
+        - Windows
+        - Linux
+   validations:
+      required: true
