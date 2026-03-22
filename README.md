@@ -32,4 +32,4 @@ More platforms / releases coming later.
 ## Meet the devs
 
 **AramCZ:**
-Hello guys my name is Aram. I am a random guy who likes to make games. So I decided to make my first game called: Hell Jump I am still learning something new but for the most part I know the essentials
+Hello guys my name is Aram. I am a random guy from czech republic who is an IT nerd and likes to make games. So I decided to make my first game called: Hell Jump I am still learning something new but for the most part I know the essentials
