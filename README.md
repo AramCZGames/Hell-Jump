@@ -14,6 +14,8 @@ Made with love (and probably a bit of frustration) in the Czech Republic ❤️
 - Added ARM64 Support
 - Removed Flatpak version
 
+Working hard behind the scenes to bring you the full release of Hell Jump
+
 ## About the Game
 
 In *Hell Jump* you control a red cube trying to get out of Hell. Because the orange cube was bad but red cube was good but hell accidently took you instead of the orange cube.
