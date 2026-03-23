@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://by4ssvuua12eh"]
+
+[ext_resource type="Script" uid="uid://cfoynt14obb6w" path="res://red_cube.gd" id="1_ojuv8"]
+[ext_resource type="AudioStream" uid="uid://c48dcnesj55ok" path="res://Music/sfx_jump.wav" id="2_gjg07"]
+[ext_resource type="AudioStream" uid="uid://dlhp3x8522rfc" path="res://Music/sfx_dash.wav" id="3_o21jx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gjg07"]
+size = Vector2(60, 59)
+
+[node name="Red cube" type="Node2D"]
+
+[node name="Red cube" type="CharacterBody2D" parent="."]
+position = Vector2(-57, -32)
+safe_margin = 0.001
+script = ExtResource("1_ojuv8")
+
+[node name="ColorRect" type="ColorRect" parent="Red cube"]
+z_index = 2
+offset_left = 99.0
+offset_top = 580.0
+offset_right = 159.0
+offset_bottom = 639.0
+color = Color(0.929412, 0.109804, 0.141176, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="PlayerCollision" type="CollisionShape2D" parent="Red cube"]
+z_index = 10
+position = Vector2(129, 609.5)
+shape = SubResource("RectangleShape2D_gjg07")
+
+[node name="SfxJump" type="AudioStreamPlayer2D" parent="Red cube"]
+position = Vector2(379, 190)
+stream = ExtResource("2_gjg07")
+bus = &"SFX"
+
+[node name="SfxDash" type="AudioStreamPlayer2D" parent="Red cube"]
+stream = ExtResource("3_o21jx")
+bus = &"SFX"

@@ -5,6 +5,15 @@ Play as a simple cube trying to jump, dodge, and survive your way out. Expect pr
 Made with love (and probably a bit of frustration) in the Czech Republic ❤️
 **Coming in Summer 2026** – currently in development.
 
+## Minor update: Hell Jump Beta 0.1.1 Patch Notes
+
+- Fixed SFX not playing when dying in Level 2
+- Fixed debugger saying global.gd not found
+- Improved tutorial screens
+- Main menu background updated to match the full release version
+- Added ARM64 Support
+- Removed Flatpak version
+
 ## About the Game
 
 In *Hell Jump* you control a red cube trying to get out of Hell. Because the orange cube was bad but red cube was good but hell accidently took you instead of the orange cube.
@@ -32,4 +41,4 @@ More platforms / releases coming later.
 ## Meet the devs
 
 **AramCZ**
-Hello guys my name is Aram. I am a random guy who likes to make games. So I decided to make my first game called: Hell Jump
+Hello guys my name is Aram. I am a random guy from czech republic who is an IT nerd and likes to make games. So I decided to make my first game called: Hell Jump I am still learning something new but for the most part I know the essentials
