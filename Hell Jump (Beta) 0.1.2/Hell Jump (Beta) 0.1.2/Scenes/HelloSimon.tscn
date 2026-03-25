@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://ln1qy27uc6xh"]
+
+[ext_resource type="Script" uid="uid://bp6bid050ib54" path="res://Scenes/hello_simon.gd" id="1_ahw1o"]
+[ext_resource type="FontFile" uid="uid://ndkar43f25gy" path="res://Symtext.ttf" id="1_o6xd3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ahw1o"]
+bg_color = Color(1, 0, 0, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 7
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_22xop"]
+bg_color = Color(0.576471, 0, 0, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 7
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nkwhn"]
+
+[node name="Node2D" type="Node2D" unique_id=741398342]
+script = ExtResource("1_ahw1o")
+
+[node name="Label" type="Label" parent="." unique_id=806696923]
+offset_left = 38.0
+offset_top = 266.0
+offset_right = 1096.0
+offset_bottom = 352.0
+theme_override_fonts/font = ExtResource("1_o6xd3")
+theme_override_font_sizes/font_size = 38
+text = "Hello Simon I know you are playing this lol"
+
+[node name="Back_button" type="Button" parent="." unique_id=92737038]
+offset_left = 462.0
+offset_top = 541.0
+offset_right = 688.0
+offset_bottom = 622.0
+theme_override_colors/font_color = Color(1, 0.57812, 0.357503, 1)
+theme_override_fonts/font = ExtResource("1_o6xd3")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_ahw1o")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_22xop")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ahw1o")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_nkwhn")
+text = "Back
+"
+
+[connection signal="pressed" from="Back_button" to="." method="_on_back_button_pressed"]

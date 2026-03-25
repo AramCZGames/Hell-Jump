@@ -5,14 +5,12 @@ Play as a simple cube trying to jump, dodge, and survive your way out. Expect pr
 Made with love (and probably a bit of frustration) in the Czech Republic ❤️
 **Coming in Summer 2026** – currently in development.
 
-## Minor update: Hell Jump Beta 0.1.1 Patch Notes
+## Minor update: Hell Jump Beta 0.1.2 Patch Notes
 
-- Fixed SFX not playing when dying in Level 2
-- Fixed debugger saying global.gd not found
-- Improved tutorial screens
-- Main menu background updated to match the full release version
-- Added ARM64 Support
-- Removed Flatpak version
+
+- Fixed the level 2 tutorial screen
+- Fixed ARM64 support for Linux
+- Fixed a missed hitbox in level 14
 
 Working hard behind the scenes to bring you the full release of Hell Jump
 
