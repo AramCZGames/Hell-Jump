@@ -1,0 +1,74 @@
+63f7b34db8d8cdea90c76aacccf841ec
+::res://::1774539305
+default_bus_layout.tres::AudioBusLayout::1171054744777670003::1773947718::0::1::::<><><>0<>0<><>::
+export_presets.cfg::TextFile::-1::1773947718::0::1::::<><><>0<>0<><>::
+MIT Licence.txt::TextFile::-1::1773947718::0::1::::<><><>0<>0<><>::
+Symtext.ttf::FontFile::919256209460515140::1773947718::1774539306::1::::<><><>0<>0<>5597651a529f6ba880f9e91be05a8fad<>res://.godot/imported/Symtext.ttf-2395b195caef5b7bdcb73b0d9963b714.fontdata::
+Thank YOU.tscn::PackedScene::1955574549781220274::1773947718::0::1::::<><><>0<>0<><>::uid://ndkar43f25gy::::res://Symtext.ttf<>uid://dyfojo42l1cpy::::res://thank_you.gd
+thank_you.gd::GDScript::8854983078574964798::1773947718::0::1::::<>Node2D<><>0<>0<><>::
+::res://misc/::1773947718
+default_bus_layout.tres::AudioBusLayout::6980453775305629790::1773947718::0::1::::<><><>0<>0<><>::
+export_presets.cfg::TextFile::-1::1773947718::0::1::::<><><>0<>0<><>::
+::res://Music/::1773947718
+Hell Jump Main menu music (unused).wav::AudioStreamWAV::2388308011073793788::1773947718::1774539306::1::::<><><>0<>0<>ccb960d8f20b3b1316a3b470543c88a8<>res://.godot/imported/Hell Jump Main menu music (unused).wav-dc8a64d4232c58841e59b7d87a5bc5e6.sample::
+::res://Photos/::1773947718
+::res://Photos/misc/::1773947718
+Finish Line.png::CompressedTexture2D::1232690674903238822::1773947718::1774539306::1::::<><><>0<>0<>2789458213bebf35f601d883cee1d382<>res://.godot/imported/Finish Line.png-ff381681bf3ba12be964e871c43e319e.ctex::
+Hell Jump Icon.png::CompressedTexture2D::2340401092612493702::1773947718::1774539306::1::::<><><>0<>0<>0dc1adf5c1c1005c72659b131819e583<>res://.godot/imported/Hell Jump Icon.png-4ec1343d83d533d5dbebc856ea4fc3d3.ctex::
+Hell Jump Logo.png::CompressedTexture2D::1349581921048974746::1773947718::1774539306::1::::<><><>0<>0<>097fd86b8a7cfea2f8bf813b912b7c1b<>res://.godot/imported/Hell Jump Logo.png-5d907092ce8bf690228aa58ad8525e48.ctex::
+Red Background.png::CompressedTexture2D::4677835448673027377::1773947718::1774539306::1::::<><><>0<>0<>5a0823e0d26a508e59a4adcf34146336<>res://.godot/imported/Red Background.png-2d3801cb7db16d57e0e504bb495bd1d8.ctex::
+Spike.png::CompressedTexture2D::212310483573370402::1773947718::1774539306::1::::<><><>0<>0<>66d1464472b41800824c971db4f4a065<>res://.godot/imported/Spike.png-d98a43528b23127e1d9d4e4ee514a345.ctex::
+SpikeWhite.png::CompressedTexture2D::6980189208784731490::1773947718::1774539306::1::::<><><>0<>0<>e5a61e09d6ff69580fe0ba967929f422<>res://.godot/imported/SpikeWhite.png-eb626d8419d1feb98c69ab171daa2f41.ctex::
+StartingSign.png::CompressedTexture2D::5200825475325225413::1773947718::1774539306::1::::<><><>0<>0<>501be42c2bbb77e50bbf1e25d97896ac<>res://.godot/imported/StartingSign.png-43389848043f7da34c49479e9368ff7d.ctex::
+The Hell.png::CompressedTexture2D::4313190431211475339::1773947718::1774539306::1::::<><><>0<>0<>0d70b9e865ceaa6536b1e323516bc22d<>res://.godot/imported/The Hell.png-c63faf4a827de2bd325f27e23994d47f.ctex::
+Tutorial 2.png::CompressedTexture2D::7705322934915186890::1773947718::1774539306::1::::<><><>0<>0<>5154865cd67a2b1c8d37da730b25a68b<>res://.godot/imported/Tutorial 2.png-e4490f8f542f6eed4506a1017073bab5.ctex::
+::res://Photos/Social Media/::1773947718
+Itch.png::CompressedTexture2D::1155289265079041813::1773947718::1774539306::1::::<><><>0<>0<>0cf4e4926b33aada6a04fd63af82b06a<>res://.godot/imported/Itch.png-23bb1b5db345be0e82dddf7de3dc3061.ctex::
+Twiter.png::CompressedTexture2D::831140163620994073::1773947718::1774539306::1::::<><><>0<>0<>a3467724c1b6d37cfd3cde71b327d24f<>res://.godot/imported/Twiter.png-5240e80e719e5f3f8b6de86e24cea27f.ctex::
+Youtube.png::CompressedTexture2D::4935193900564780909::1773947718::1774539306::1::::<><><>0<>0<>d3bd2e2ff30ace22f0993637888940db<>res://.godot/imported/Youtube.png-52cc1e294227312cbc8cbf99b18453cc.ctex::
+::res://Scenes/::1773947718
+HelloSimon.tscn::PackedScene::800522709086437921::1773947718::0::1::::<><><>0<>0<><>::uid://bp6bid050ib54::::res://Scenes/hello_simon.gd<>uid://ndkar43f25gy::::res://Symtext.ttf
+hello_simon.gd::GDScript::3503324249570394093::1773947718::0::1::::<>Node2D<><>0<>0<><>::
+level_select.tscn::PackedScene::1834856604407664082::1773947718::0::1::::<><><>0<>0<><>::uid://ci3ebi5gfcds7::::res://Scripts/level_select.gd<>uid://b7v8jb7tavgpt::::res://Photos/misc/Red Background.png<>uid://ndkar43f25gy::::res://Symtext.ttf<>uid://b2plu7mt0nu8b::::res://Photos/misc/The Hell.png
+MainMenu.tscn::PackedScene::6482436411164388502::1773947718::0::1::::<><><>0<>0<><>::uid://g8awgsqvh8rk::::res://Scripts/main_menu.gd<>uid://th0ogeixot4u::::res://Photos/misc/Hell Jump Logo.png<>uid://b42voy6332qk8::::res://Scripts/Menu scripts/fullscreen.gd<>uid://dj32bs4u0duhr::::res://Scripts/sfx_slider.gd<>uid://cckv6mn85qs0t::::res://Photos/Social Media/Youtube.png<>uid://ndkar43f25gy::::res://Symtext.ttf<>uid://qpvpe5ibpnn6::::res://Photos/Social Media/Itch.png<>uid://l3u00fvsa8tp::::res://Photos/Social Media/Twiter.png
+Red cube.tscn::PackedScene::4131946070829899339::1773947718::0::1::::<><><>0<>0<><>::uid://cfoynt14obb6w::::res://red_cube.gd<>uid://c48dcnesj55ok::::res://Music/sfx_jump.wav<>uid://dlhp3x8522rfc::::res://Music/sfx_dash.wav
+Spike.tscn::PackedScene::4859675201354062843::1773947718::0::1::::<><><>0<>0<><>::res://spike.gd<>uid://da3ytm4g4dmw::::res://Photos/misc/Spike.png
+the_hell_level_select.tscn::PackedScene::3929893367928677079::1773947718::0::1::::<><><>0<>0<><>::uid://dkal5vy7jjtji::::res://Scripts/the_hell_level_select.gd<>uid://ndkar43f25gy::::res://Symtext.ttf
+::res://Scenes/Levels/::1773947718
+::res://Scenes/Levels/The hell/::1773947718
+Level1.tscn::PackedScene::6689355171421167660::1773947718::0::1::::<><><>0<>0<><>::uid://cfoynt14obb6w::::res://Scripts/red_cube.gd<>uid://ddf1h7qgejd5h::::res://SFX/jump.wav<>uid://da3ytm4g4dmw::::res://Photos/misc/Spike.png<>uid://ce26ugl2ji5j4::::res://SFX/Dash.wav<>uid://dwg7anwuclwvf::::res://SFX/hitHurt.wav<>uid://rteiaa58cgfe::::res://Photos/misc/Finish Line.png<>uid://cgdk3odqcrvw4::::res://Photos/misc/StartingSign.png
+Level2.tscn::PackedScene::7069329867640534083::1773947718::0::1::::<><><>0<>0<><>::uid://ce26ugl2ji5j4::::res://SFX/Dash.wav<>uid://da3ytm4g4dmw::::res://Photos/misc/Spike.png<>uid://ddf1h7qgejd5h::::res://SFX/jump.wav<>uid://rteiaa58cgfe::::res://Photos/misc/Finish Line.png<>uid://dwg7anwuclwvf::::res://SFX/hitHurt.wav<>uid://dh1rspxe0woek::::res://Photos/misc/Tutorial 2.png
+Level4.tscn::PackedScene::7925090700535334638::1773947718::0::1::::<><><>0<>0<><>::uid://b0gbpawgtnunw::::res://Photos/misc/Finish Line.png<>uid://cfoynt14obb6w::::res://Scripts/red_cube.gd<>uid://ddf1h7qgejd5h::::res://SFX/jump.wav<>uid://dwg7anwuclwvf::::res://SFX/hitHurt.wav<>uid://ce26ugl2ji5j4::::res://SFX/Dash.wav
+Level5+.tscn::PackedScene::910932299110932103::1773947718::0::1::::<><><>0<>0<><>::uid://cfoynt14obb6w::::res://Scripts/red_cube.gd<>uid://dwg7anwuclwvf::::res://SFX/hitHurt.wav<>uid://da3ytm4g4dmw::::res://Photos/misc/Spike.png<>uid://ddf1h7qgejd5h::::res://SFX/jump.wav<>uid://rteiaa58cgfe::::res://Photos/misc/Finish Line.png<>uid://ce26ugl2ji5j4::::res://SFX/Dash.wav
+Level5.tscn::PackedScene::5510878085300828669::1773947718::0::1::::<><><>0<>0<><>::uid://cfoynt14obb6w::::res://Scripts/red_cube.gd<>uid://b0gbpawgtnunw::::res://Photos/misc/Finish Line.png<>uid://ddf1h7qgejd5h::::res://SFX/jump.wav<>uid://dwg7anwuclwvf::::res://SFX/hitHurt.wav<>uid://ce26ugl2ji5j4::::res://SFX/Dash.wav
+Level6.tscn::PackedScene::3781742926592130250::1773947718::0::1::::<><><>0<>0<><>::uid://cfoynt14obb6w::::res://Scripts/red_cube.gd<>uid://dwg7anwuclwvf::::res://SFX/hitHurt.wav<>uid://ddf1h7qgejd5h::::res://SFX/jump.wav<>uid://ce26ugl2ji5j4::::res://SFX/Dash.wav<>uid://rteiaa58cgfe::::res://Photos/misc/Finish Line.png<>uid://da3ytm4g4dmw::::res://Photos/misc/Spike.png
+Level7.tscn::PackedScene::5482950440126544092::1773947718::0::1::::<><><>0<>0<><>::uid://da3ytm4g4dmw::::res://Photos/misc/Spike.png<>uid://cfoynt14obb6w::::res://Scripts/red_cube.gd<>uid://ddf1h7qgejd5h::::res://SFX/jump.wav<>uid://ce26ugl2ji5j4::::res://SFX/Dash.wav<>uid://dwg7anwuclwvf::::res://SFX/hitHurt.wav<>uid://rteiaa58cgfe::::res://Photos/misc/Finish Line.png
+Level8+.tscn::PackedScene::6501677816657578163::1773947718::0::1::::<><><>0<>0<><>::uid://cfoynt14obb6w::::res://Scripts/red_cube.gd<>uid://ddf1h7qgejd5h::::res://SFX/jump.wav<>uid://ce26ugl2ji5j4::::res://SFX/Dash.wav<>uid://dwg7anwuclwvf::::res://SFX/hitHurt.wav<>uid://rteiaa58cgfe::::res://Photos/misc/Finish Line.png<>uid://da3ytm4g4dmw::::res://Photos/misc/Spike.png
+Level8.tscn::PackedScene::8585161344349294576::1773947718::0::1::::<><><>0<>0<><>::uid://cfoynt14obb6w::::res://Scripts/red_cube.gd<>uid://ddf1h7qgejd5h::::res://SFX/jump.wav<>uid://ce26ugl2ji5j4::::res://SFX/Dash.wav<>uid://dwg7anwuclwvf::::res://SFX/hitHurt.wav<>uid://rteiaa58cgfe::::res://Photos/misc/Finish Line.png
+Level9.tscn::PackedScene::5883580608417562897::1773947718::0::1::::<><><>0<>0<><>::uid://cfoynt14obb6w::::res://Scripts/red_cube.gd<>uid://ddf1h7qgejd5h::::res://SFX/jump.wav<>uid://ce26ugl2ji5j4::::res://SFX/Dash.wav<>uid://dwg7anwuclwvf::::res://SFX/hitHurt.wav<>uid://da3ytm4g4dmw::::res://Photos/misc/Spike.png<>uid://rteiaa58cgfe::::res://Photos/misc/Finish Line.png
+Level10.tscn::PackedScene::7635552375291791184::1773947718::0::1::::<><><>0<>0<><>::uid://ce26ugl2ji5j4::::res://SFX/Dash.wav<>uid://cfoynt14obb6w::::res://Scripts/red_cube.gd<>uid://ddf1h7qgejd5h::::res://SFX/jump.wav<>uid://dwg7anwuclwvf::::res://SFX/hitHurt.wav<>uid://da3ytm4g4dmw::::res://Photos/misc/Spike.png<>uid://rteiaa58cgfe::::res://Photos/misc/Finish Line.png
+Level11+.tscn::PackedScene::9013467730394624169::1773947718::0::1::::<><><>0<>0<><>::uid://da3ytm4g4dmw::::res://Photos/misc/Spike.png<>uid://cfoynt14obb6w::::res://Scripts/red_cube.gd<>uid://ddf1h7qgejd5h::::res://SFX/jump.wav<>uid://ce26ugl2ji5j4::::res://SFX/Dash.wav<>uid://dwg7anwuclwvf::::res://SFX/hitHurt.wav<>uid://rteiaa58cgfe::::res://Photos/misc/Finish Line.png
+Level11.tscn::PackedScene::1336231497151494736::1773947718::0::1::::<><><>0<>0<><>::uid://da3ytm4g4dmw::::res://Photos/misc/Spike.png<>uid://cfoynt14obb6w::::res://Scripts/red_cube.gd<>uid://ddf1h7qgejd5h::::res://SFX/jump.wav<>uid://ce26ugl2ji5j4::::res://SFX/Dash.wav<>uid://dwg7anwuclwvf::::res://SFX/hitHurt.wav<>uid://rteiaa58cgfe::::res://Photos/misc/Finish Line.png<>uid://c6pixxdjtxeec::::res://Photos/misc/SpikeWhite.png
+Level12.tscn::PackedScene::8253332093287889702::1773947718::0::1::::<><><>0<>0<><>::uid://cfoynt14obb6w::::res://Scripts/red_cube.gd<>uid://ce26ugl2ji5j4::::res://SFX/Dash.wav<>uid://dwg7anwuclwvf::::res://SFX/hitHurt.wav<>uid://ddf1h7qgejd5h::::res://SFX/jump.wav<>uid://rteiaa58cgfe::::res://Photos/misc/Finish Line.png
+Level13.tscn::PackedScene::2880351271309366629::1773947718::0::1::::<><><>0<>0<><>::uid://rteiaa58cgfe::::res://Photos/misc/Finish Line.png<>uid://cfoynt14obb6w::::res://Scripts/red_cube.gd<>uid://ddf1h7qgejd5h::::res://SFX/jump.wav<>uid://ce26ugl2ji5j4::::res://SFX/Dash.wav<>uid://dwg7anwuclwvf::::res://SFX/hitHurt.wav<>uid://ndkar43f25gy::::res://Symtext.ttf<>uid://da3ytm4g4dmw::::res://Photos/misc/Spike.png
+Level14.tscn::PackedScene::8731521420750680547::1773947718::0::1::::<><><>0<>0<><>::uid://da3ytm4g4dmw::::res://Photos/misc/Spike.png<>uid://cfoynt14obb6w::::res://Scripts/red_cube.gd<>uid://ddf1h7qgejd5h::::res://SFX/jump.wav<>uid://ce26ugl2ji5j4::::res://SFX/Dash.wav<>uid://dwg7anwuclwvf::::res://SFX/hitHurt.wav<>uid://rteiaa58cgfe::::res://Photos/misc/Finish Line.png
+level_3.tscn::PackedScene::6224727491799879550::1773947718::0::1::::<><><>0<>0<><>::uid://da3ytm4g4dmw::::res://Photos/misc/Spike.png<>uid://cfoynt14obb6w::::res://Scripts/red_cube.gd<>uid://dwg7anwuclwvf::::res://SFX/hitHurt.wav<>uid://rteiaa58cgfe::::res://Photos/misc/Finish Line.png<>uid://ddf1h7qgejd5h::::res://SFX/jump.wav<>uid://ce26ugl2ji5j4::::res://SFX/Dash.wav
+::res://Scripts/::1773947718
+level_select.gd::GDScript::5392399814179416240::1773947718::0::1::::<>Control<><>0<>0<><>::
+main_menu.gd::GDScript::489297158879998680::1773947718::0::1::::<>Control<><>0<>0<><>::
+music_slider.gd::GDScript::972828343234512502::1773947718::0::1::::<>HSlider<><>0<>0<><>::
+pause_menu.gd::GDScript::8919752893232046953::1773947718::0::1::::<>Node<><>0<>0<><>::
+red_cube.gd::GDScript::5154168336725304768::1773947718::0::1::::<>CharacterBody2D<><>0<>0<><>::
+sfx_slider.gd::GDScript::7850406356695756599::1773947718::0::1::::<>HSlider<><>0<>0<><>::
+terms_panel.gd::GDScript::5352203897729684450::1773947718::0::1::::<>Panel<><>0<>0<><>::
+the_hell_level_select.gd::GDScript::7861873089729200606::1773947718::0::1::::<>Control<><>0<>0<><>::
+::res://Scripts/Menu scripts/::1773947718
+fullscreen.gd::GDScript::4478936716278448141::1773947718::0::1::::<>CheckButton<><>0<>0<><>::
+main_menu.gd::GDScript::489297158879998680::1773947718::0::1::::<>Control<><>0<>0<><>::
+sfx_slider.gd::GDScript::7850406356695756599::1773947718::0::1::::<>HSlider<><>0<>0<><>::
+terms_panel.gd::GDScript::5352203897729684450::1773947718::0::1::::<>Panel<><>0<>0<><>::
+the_hell_level_select.gd::GDScript::7861873089729200606::1773947718::0::1::::<>Control<><>0<>0<><>::
+::res://SFX/::1773947718
+Dash.wav::AudioStreamWAV::5111253217323886263::1773947718::1774539306::1::::<><><>0<>0<>c3ea2638c286f6299c7b0c1e3f1a9a4e<>res://.godot/imported/Dash.wav-48f6186c99e994f604cb4c537cf4fb18.sample::
+hitHurt.wav::AudioStreamWAV::8717746539109989791::1773947718::1774539306::1::::<><><>0<>0<>ccaa091aba7e13750cad7ee0f1c156bd<>res://.godot/imported/hitHurt.wav-e3a455e3bb955d834de4307012292765.sample::
+jump.wav::AudioStreamWAV::7381743318875352919::1773947718::1774539306::1::::<><><>0<>0<>6f214909c2b89e370c96549284bf5ff4<>res://.godot/imported/jump.wav-05a4d82c0da350e490f74f14b3bdb9b1.sample::
